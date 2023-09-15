@@ -4,6 +4,9 @@ import { IUser } from '../../interface/user';
 import { ErrorPage } from '../error/error-page';
 import { useNavigate } from 'react-router-dom';
 
+import backArrow from '../../assets/icons/back-arrow.svg';
+import avatarIcon from '../../assets/icons/avatar-icon.svg';
+
 export function UserDetails() {
     const [user, setUser] = useState<IUser>()
     const navigator = useNavigate();
@@ -23,7 +26,7 @@ export function UserDetails() {
     return <>
         <div>
             <div className="d-flex align-items-center back" onClick={goBack}>
-                <img src="/src/assets/icons/back-arrow.svg" alt="" />
+                <img src={backArrow} alt="" />
                 <div className='text-color-2'>Back to Users</div>
             </div>
 
@@ -41,7 +44,7 @@ export function UserDetails() {
             <div className='tabs-container rounded bg-white'>
                 <div className="d-flex flex-column justify-content-center justify-content-md-start flex-md-row align-items-center">
                     <div className="avatar-container rounded-circle d-flex align-items-center justify-content-center">
-                        <img src="/src/assets/icons/avatar-icon.svg" alt="" />
+                        <img src={avatarIcon} alt="" />
                     </div>
                     <div className="account-info d-flex flex-column justify-content-center flex-md-row align-items-md-center">
                         <div className="d-flex flex-column h-100 justify-content-center align-items-center align-items-md-start">

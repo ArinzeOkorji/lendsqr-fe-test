@@ -2,6 +2,11 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import './app-shell.scss';
 import { Menu } from './menu/menu';
 
+import logo from '../assets/logo.svg';
+import search from '../assets/icons/search.svg';
+import notification from '../assets/icons/notification.svg';
+import avatar from '../assets/images/avatar.png';
+
 export function AppShell() {
     const navigator = useNavigate();
 
@@ -14,14 +19,14 @@ export function AppShell() {
         <div>
             <div className="header-tab">
                 <div className="navbar justify-content-start logo align-content-end align-content-md-center d-flex ">
-                    <span className="navbar-toggler-icon d-lg-none ms-3 me-4" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu"></span> <img src="/src/assets/logo.svg" alt="" />
+                    <span className="navbar-toggler-icon d-lg-none ms-3 me-4" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu"></span> <img src={logo} alt="" />
                 </div>
 
                 <div className='search d-flex align-items-center justify-content-around justify-content-lg-start'>
                     <div className='d-flex'>
                         <input type="text" className='border-grey rounded-start border-end-0' placeholder='Search for anything' />
                         <button className='button-primary rounded-start-0'>
-                            <img src="/src/assets/icons/search.svg" alt="" />
+                            <img src={search} alt="" />
                         </button>
                     </div>
                 </div>
@@ -32,7 +37,7 @@ export function AppShell() {
                             Docs
                         </div>
                         <div>
-                            <img src="/src/assets/icons/notification.svg" alt="" />
+                            <img src={notification} alt="" />
                         </div>
                     </div>
                     <div>
@@ -41,7 +46,7 @@ export function AppShell() {
                                 <a className="nav-link dropdown-toggle py-0 py-lg-2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <div className="d-inline-flex align-items-center">
                                         <div className="avatar">
-                                            <img src="/src/assets/images/avatar.png" className='rounded-circle w-100' alt="" />
+                                            <img src={avatar} className='rounded-circle w-100' alt="" />
                                         </div>
                                         <span className="ms-2 fw-500">Adedeji</span>
                                     </div>
@@ -62,7 +67,7 @@ export function AppShell() {
                 </div>
                 <div className="offcanvas offcanvas-start d-lg-none" tab-index="-1" id="menu" aria-labelledby="staticBackdropLabel">
                     <div className="offcanvas-header">
-                        <img src="/src/assets/logo.svg" alt="" />
+                        <img src={logo} alt="" />
                         <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div className="offcanvas-body ps-0">

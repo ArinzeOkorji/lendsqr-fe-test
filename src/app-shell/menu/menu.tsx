@@ -1,6 +1,8 @@
 import { Nav } from '../nav-link/nav-link';
 import './menu.scss';
 
+import switchOrganization from '../../assets/icons/switch organization.svg';
+
 export function Menu() {
     const navData: {section: string, links: string[]}[] = [
         {
@@ -21,7 +23,7 @@ export function Menu() {
             <div className="dropdown swithOrganization">
                 <div className="text-color-1 dropdown-toggle border-0" data-bs-toggle="dropdown" aria-expanded="false">
                     <div className="d-inline-flex align-items-center menu-item">
-                        <img src="/src/assets/icons/switch organization.svg" alt="" className='me-2' /> Switch Organization
+                        <img src={switchOrganization} alt="" className='me-2' /> Switch Organization
                     </div>
                 </div>
                 <ul className="dropdown-menu">

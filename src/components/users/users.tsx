@@ -9,6 +9,13 @@ import { useNavigate } from 'react-router-dom';
 import { FilterOption  } from '../filter-menu/filter-menu';
 import { IfilterParams } from '../../interface/filter';
 
+import kebab from '../../assets/icons/kebab.svg';
+import eye from '../../assets/icons/eye.svg';
+import blacklistUser from '../../assets/images/blacklist-user.png';
+import activateUser from '../../assets/images/activate-user.png';
+import caretLeft from '../../assets/icons/caret-left.svg';
+import caretRight from '../../assets/icons/caret-right.svg';
+
 export function Users() {
     let itemOffset = 0;
     const [itemsPerPage, setItemsPerPage] = useState<number>(10);
@@ -253,24 +260,24 @@ export function Users() {
                                             <div className='fs-14'>
                                                 <div className="dropdown">
                                                     <div className="" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <img src="/src/assets/icons/kebab.svg" alt="" />
+                                                        <img src={kebab} alt="" />
                                                     </div>
                                                     <ul className="dropdown-menu options-container">
                                                         <li><div className="dropdown-item" onClick={() => viewDetails(user)}>
                                                             <div className="d-flex align-items-center justify-content-around options fw-500 fs-14 text-color-2">
-                                                                <img src="/src/assets/icons/eye.svg" alt="" />
+                                                                <img src={eye} alt="" />
                                                                 View Details
                                                             </div>
                                                         </div></li>
                                                         <li><div className="dropdown-item">
                                                             <div className="d-flex align-items-center justify-content-around options fw-500 fs-14 text-color-2">
-                                                                <img src="/src/assets/images/blacklist-user.png" alt="" />
+                                                                <img src={blacklistUser} alt="" />
                                                                 Blacklist User
                                                             </div>
                                                         </div></li>
                                                         <li><div className="dropdown-item">
                                                             <div className="d-flex align-items-center justify-content-around options fw-500 fs-14 text-color-2">
-                                                                <img src="/src/assets/images/activate-user.png" alt="" />
+                                                                <img src={activateUser} alt="" />
                                                                 Activate User
                                                             </div>
                                                         </div></li>
@@ -301,23 +308,14 @@ export function Users() {
                     </div>
                     <ReactPaginate
                         breakLabel="..."
-                        nextLabel={<img src='/src/assets/icons/caret-right.svg' alt=''/>}
+                        nextLabel={<img src={caretRight} alt=''/>}
                         onPageChange={handlePageClick}
                         pageRangeDisplayed={5}
                         pageCount={pageCount}
-                        previousLabel={<img src='/src/assets/icons/caret-left.svg' alt=''/>}
+                        previousLabel={<img src={caretLeft} alt=''/>}
                         renderOnZeroPageCount={null}
                     />
                 </div>
         </div>
     </>
 }
-
-<div className="dropdown">
-    <div className="" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="/src/assets/icons/kebab.svg" alt="" />
-    </div>
-    <ul className="dropdown-menu options-container">
-
-    </ul>
-</div>

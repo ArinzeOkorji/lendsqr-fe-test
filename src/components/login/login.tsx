@@ -2,6 +2,9 @@ import { useState } from 'react';
 import './login.scss';
 import { useNavigate } from 'react-router-dom';
 
+import logo from '../../assets/logo.svg';
+import loginImg from '../../assets/images/login-img.svg';
+
 export function Login() {
     const [passwordFieldType, setPasswordFieldType] = useState('password');
 
@@ -32,9 +35,9 @@ export function Login() {
     return <>
         <div className='h-100 d-flex flex-column flex-lg-row login px-5 pb-4 pb-lg-0 px-lg-0 justify-content-lg-between'>
             <div className="d-flex flex-column justify-content-center mt-4 mt-lg-0 position-relative align-items-start logo-header">
-                <img src="/src/assets/logo.svg" className='logo mb-5 mb-lg-0' alt="" />
+                <img src={logo} className='logo mb-5 mb-lg-0' alt="" />
                 <div className='img-container align-self-center align-self-lg-start'>
-                    <img className='w-100' src="/src/assets/images/login-img.svg" alt="" />
+                    <img className='w-100' src={loginImg} alt="" />
                 </div>
             </div>
 
