@@ -66,7 +66,7 @@ export function FilterOption(
         <div className="filterMenu">
             <form>
                 <div className="mb-3">
-                    <label htmlFor="organization" className="form-label fw-500 text-color-1 fs-14">Organization</label>
+                    <label htmlFor="organization" className="form-label fw-500 text-color-2 fs-14">Organization</label>
                     <select className="form-select" aria-label="Default select example" ref={organizationFieldRef}>
                         <option value=''>Select</option>
                         {
@@ -78,23 +78,23 @@ export function FilterOption(
                     </select>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="username" className="form-label fw-500 text-color-1 fs-14">Username</label>
+                    <label htmlFor="username" className="form-label fw-500 text-color-2 fs-14">Username</label>
                     <input type="text" className="form-control" id="username" placeholder="User" ref={usernameFieldRef} />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="email" className="form-label fw-500 text-color-1 fs-14">Email</label>
+                    <label htmlFor="email" className="form-label fw-500 text-color-2 fs-14">Email</label>
                     <input type="email" className="form-control" id="email" placeholder="Email" ref={emailFieldRef} />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="date" className="form-label fw-500 text-color-1 fs-14">Date</label>
+                    <label htmlFor="date" className="form-label fw-500 text-color-2 fs-14">Date</label>
                     <input type="date" className="form-control" id="date" placeholder="Date" ref={dateJoinedFieldRef} />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="phoneNumber" className="form-label fw-500 text-color-1 fs-14">Phone Number</label>
+                    <label htmlFor="phoneNumber" className="form-label fw-500 text-color-2 fs-14">Phone Number</label>
                     <input type="phone" className="form-control" id="phoneNumber" placeholder="Phone Number" ref={phoneFieldRef} />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="date" className="form-label fw-500 text-color-1 fs-14">Status</label>
+                    <label htmlFor="date" className="form-label fw-500 text-color-2 fs-14">Status</label>
                     <select className="form-select" aria-label="Default select example" ref={statusFieldRef}>
                         <option value=''>Select</option>
                         <option value="pending">Pending</option>
@@ -106,8 +106,8 @@ export function FilterOption(
 
                 <div>
                     <div className="d-flex align-items-center button-container">
-                        <button type='button' className='button-grey-outline' onClick={reset}>Reset</button>
-                        <button type='button' className='button-primary' onClick={filter}>Filter</button>
+                        <button type='button' className='button-grey-outline flex-grow-1 py-0' onClick={reset}>Reset</button>
+                        <button type='button' className='button-primary flex-grow-1 py-0' onClick={filter}>Filter</button>
                     </div>
                 </div>
             </form>
