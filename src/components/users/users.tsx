@@ -70,7 +70,7 @@ export function Users() {
 
     async function fetchAllUsersData() {
         // setUsersDataSet([])
-        const url = 'http://demo0007135.mockable.io/';
+        const url = 'https://demo0007135.mockable.io/';
         try {
             const { data }: { data: IUser[] } = await axios.get(url);
 

@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
 import './nav-link.scss';
-
 interface props {
     name: string,
     classes: string
@@ -19,7 +18,7 @@ export function Nav(prop: props) {
         >
 
             <div className='d-flex align-items-center link-container'>
-                <img src={`/src/assets/icons/${name}.svg`} alt="" className='' /> {name}
+                <img src={`/${name}.svg`} alt="" className='' /> {name}
             </div>
         </NavLink>
 
