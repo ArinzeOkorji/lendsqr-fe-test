@@ -1,0 +1,36 @@
+.menu-item {
+    border-left: 3px solid transparent;
+    // padding-top: 7px;
+    // padding-bottom: 7px;
+    padding-left: 28px;
+    text-decoration: none;
+}
+
+.swithOrganization {
+    margin-bottom: 52px;
+    margin-top: 31px;
+}
+
+ul.links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+            margin-bottom: 20px;
+        > a {
+        padding-top: 10px;
+        padding-bottom: 11px;
+
+        }
+
+        .active {
+            border-color: var(--primary);
+            background-color: var(--primary-6);
+        }
+    }
+}
+
+.sectionTitle {
+    margin-bottom: 20px;
+}

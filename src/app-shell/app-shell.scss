@@ -1,0 +1,109 @@
+@mixin xl() {
+    @media screen and (min-width: 1024px) {
+        @content
+    }
+  }
+@mixin md() {
+    @media screen and (min-width: 768px) {
+        @content
+    }
+  }
+
+.header-tab {
+    height: 162px;
+    display: grid;
+    grid-template-areas: 
+    'logo . profile'
+    'search search search';
+    z-index: 2;
+    position: relative;
+    box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.04);
+    @include xl {
+        height: 100px;
+        grid-template-areas: 
+        "logo search profile";
+        grid-template-columns: 19.7% 59.3% 21%;
+        // justify-content: space-between;
+    }
+
+    .dropdown-menu {
+        cursor: pointer;
+    }
+    
+}
+
+.avatar {
+    height: 48px;
+    width: 48px;
+}
+
+input {
+    padding: 12px 20px;
+}
+
+.logo {
+    grid-area: logo;
+    @include xl {
+        margin-left: 30px;
+    }
+}
+
+.search {
+    width: 100%;
+    grid-area: search;
+    @include xl {
+       > div {
+        margin-left: 60px;
+        width: 100%;
+
+        input {
+            width: 50%
+        }
+       }
+        // width: 27.78%
+    }
+}
+
+.profile {
+    grid-area: profile;
+
+    @include md {
+        column-gap: 30px;
+        margin-right: 30px;
+    }
+}
+
+.notification-container {
+    column-gap: 41px;
+}
+
+.docs-text {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main {
+        height: calc(100vh - 162px);
+    @include xl {
+        height: calc(100vh - 100px);
+        display: grid;
+        grid-template-columns: 19.7% 1fr;
+    }
+
+    .content {
+        padding-top: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        overflow-y: scroll;
+        background-color: #FBFBFB;
+        @include xl {
+            padding-top: 60px;
+            padding-left: 60px;
+            padding-right: 30px;
+        }
+    }
+
+    .menu-list {
+        overflow-y: auto;
+        box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.04);
+    }
+}

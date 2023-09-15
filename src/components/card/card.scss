@@ -1,0 +1,25 @@
+@mixin xl() {
+    @media screen and (min-width: 1024px) {
+        @content
+    }
+}
+
+.icon-container {
+   height: 40px; 
+   width: 40px; 
+}
+.title {
+    margin-top: 14px;
+}
+.value {
+    margin-top: 12px;
+}
+.card-item {
+    padding: 15px 0 20px 15px;
+    border-radius: 4px;
+    box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
+
+    @include xl {
+        padding: 20px 0 30px 30px;
+    }
+}

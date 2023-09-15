@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'SF Compact Text Regular';
+    src: url('/src/assets/fonts/SF-Compact-Text-Regular.ttf');
+}
+
+@mixin md() {
+    @media screen and (min-width: 768px) {
+        @content
+    }
+}
+
+.back {
+    column-gap: 13px;
+    cursor: pointer;
+}
+
+.button-container {
+    column-gap: 20px;
+}
+
+.title-container {
+    margin-top: 32px;
+}
+
+.tabs-container {
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-left: 15px;
+    box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
+
+    @include md {
+        padding-left: 30px;
+    }
+
+    .avatar-container {
+        background-color: hsla(220, 58%, 31%, 0.16);
+        width: 100px;
+        height: 100px;
+    }
+
+    &.panels {
+        margin-top: 30px;
+        .panel-sectiom {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+        }
+
+        .panel-sectiom:not(:last-child) {
+            border-bottom: 1px solid #21407d1a;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            column-gap: 100px;
+            row-gap: 30px;
+            padding-left: 0;
+            label {
+                font-variant: small-caps;
+                margin-bottom: 8px;
+                text-transform: uppercase;
+            }
+            div {
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.nav-tabs-container {
+    >ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+        white-space: nowrap;
+        padding-bottom: 1px;
+        justify-content: space-between;
+    }
+
+    @include md {
+        margin-top: 51px;
+    }
+
+    .nav-link {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        border-bottom: solid 2px transparent;
+        font-family: 'SF Compact Text Regular', 'sans-serif';
+        color: rgba(0, 0, 0, 0.80);
+        cursor: pointer;
+
+
+        &.active {
+            color: #39CDCC;
+            border-bottom-color: #39CDCC;
+            font-family: 'Work Sans', sans-serif;
+        }
+    }
+}
+
+.account-info {
+    @include md {
+        height: 100px;
+        margin-left: 20px;
+        column-gap: 30px;
+
+        >div:not(:last-child) {
+            padding-right: 30px;
+            border-right: 1px solid #545f7d33;
+        }
+    }
+}
+
+.tier-container {
+    column-gap: 4px;
+}

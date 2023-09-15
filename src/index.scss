@@ -1,0 +1,297 @@
+@import "~bootstrap/scss/bootstrap";
+
+@mixin xl() {
+  @media screen and (min-width: 1024px) {
+      @content
+  }
+}
+
+$dark-background: #242424;
+$primary: #39CDCC;
+$primary-6: #37cdcd0f;
+$red: #E4033B;
+$text-color-1: #213F7D;
+$text-color-2: #545F7D;
+$blue-1: #545f7d1a;
+$pink-1: #e01aff1a;
+$purple-1: #571aff1a;
+$orange-1: #f55d421a;
+$red-1: #ff33661a;
+$red-2: #e2033b1a;
+$yellow: #ebb400;
+$yellow-1: #ebb4001a;
+$green-1: #37cd621a;
+$green: #39CD62;
+
+
+:root {
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: $dark-background;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --dark-background: $dark-background;
+--primary: #39CDCC;
+--primary-6: #37cdcd0f;
+--red: $red;
+--text-color-1: $text-color-1;
+--text-color-2: $text-color-2;
+--green: #39CD62;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+font-family: 'Work Sans', sans-serif;
+
+ > #root {
+  height: 100vh;
+ }
+}
+
+.fw {
+  &-500 {
+    font-weight: 500 !important;
+  }
+
+  &-600 {
+    font-weight: 600 !important;
+  }
+
+  &-700 {
+    font-weight: 700 !important;
+  }
+}
+
+.fs {
+  &-12 {
+    font-size: 12px;
+  }
+  &-14 {
+    font-size: 14px;
+  }
+  &-24 {
+    font-size: 24px;
+  }
+  &-22 {
+    font-size: 22px;
+  }
+  &-40 {
+    font-size: 40px;
+  }
+}
+
+
+input::placeholder {
+  color: $text-color-2;
+  size: 14px;
+  opacity: 0.6;
+}
+
+.opacity-60 {
+  opacity: .6;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.button {
+  font-weight: 600 !important;
+  &-primary {
+    background-color: $primary;
+    border: 1px solid $primary;
+    color: #ffffff;
+  }
+
+  &-primary-outline {
+    background-color: #ffffff;
+    border: 1px solid $primary;
+    color: $primary;
+  }
+
+  &-red-outline {
+    background-color: #ffffff;
+    border: 1px solid $red;
+    color: $red;
+  }
+
+  &-grey-outline {
+    background-color: #ffffff;
+    border: 1px solid $text-color-2;
+    color: $text-color-2;
+  }
+}
+
+.border {
+  &-grey {
+    border: 1px solid $text-color-2
+  }
+}
+
+table {
+  thead {
+    th {
+      color: $text-color-2 !important;
+    }
+  }
+
+  tbody {
+    td {
+      color: $text-color-2 !important;
+    }
+  }
+}
+
+.bg {
+  &-pink-1 {
+    background-color: $pink-1;
+  }
+  &-purple-1 {
+    background-color: $purple-1;
+  }
+  &-orange-1 {
+    background-color: $orange-1;
+  }
+  &-red-1 {
+    background-color: $red-1;
+  }
+  &-red-2 {
+    background-color: $red-2;
+  }
+  &-yellow-1 {
+    background-color: $yellow-1;
+  }
+  &-green-1 {
+    background-color: $green-1;
+  }
+  &-blue-1 {
+    background-color: $blue-1;
+  }
+}
+
+form {
+  label {
+      margin-bottom: 6px;
+  }
+
+  input {
+      border-radius: 8px;
+      border: 1px solid #213F7D;
+      // opacity: 0.2;
+      background: #FFF;
+  }
+
+  .button-container {
+      column-gap: 14px;
+  }
+}
+
+
+
+.text {
+  &-color-1 {
+    color: $text-color-1; 
+  }
+  &-color-2 {
+    color: $text-color-2; 
+  }
+  &-green {
+    color: $green;
+  }
+  &-red {
+    color: $red;
+  }
+  &-yellow {
+    color: $yellow;
+  }
+  &-primary {
+    color: $primary !important;
+  }
+}
+
+ul[aria-label='Pagination'] {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  column-gap: 15px;
+  
+  @include xl {
+    column-gap: 20px;
+  }
+
+  li {
+    a {
+      color: #545f7d99 !important;
+      text-decoration: none;
+    }
+    
+    
+  }
+
+  li.selected {
+    a {
+      color: $text-color-2 !important;
+    }
+  }
+
+  li.disabled {
+    a {
+      opacity: 0.6;
+    }
+  }
+
+  li.next, li.previous {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+height: 24px;
+    border-radius: 4px;
+background: rgba(33, 63, 125, 0.10);
+a {
+  color: #213F7D;
+}
+  }
+
+
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+
+}
