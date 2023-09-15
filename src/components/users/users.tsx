@@ -186,7 +186,7 @@ export function Users() {
 
                                     <div className="dropdown-center">
                                         <div className="" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <img src="/src//assets/icons/filter.svg" alt="" />
+                                            <img src={filter} alt="" />
                                         </div>
                                         <ul className="dropdown-menu options-container pt-0">
                                             <FilterOption resetFilter={resetFilter}  filterData={filterData} organizationList={organizations} />
@@ -197,7 +197,7 @@ export function Users() {
                                 <th scope="col" className="text-uppercase text-color-1 fw-600 fs-12"> <div className="d-flex align-items-center">Username
                                     <div className="dropdown-center">
                                         <div className="" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <img src="/src//assets/icons/filter.svg" alt="" />
+                                            <img src={filter} alt="" />
                                         </div>
                                         <ul className="dropdown-menu options-container pt-0">
                                             <FilterOption resetFilter={resetFilter}  filterData={filterData} organizationList={organizations} />
@@ -207,7 +207,7 @@ export function Users() {
                                 <th scope="col" className="text-uppercase text-color-1 fw-600 fs-12"> <div className="d-flex align-items-center">Email
                                     <div className="dropdown-center">
                                         <div className="" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <img src="/src//assets/icons/filter.svg" alt="" />
+                                            <img src={filter} alt="" />
                                         </div>
                                         <ul className="dropdown-menu options-container pt-0">
                                             <FilterOption resetFilter={resetFilter}  filterData={filterData} organizationList={organizations} />
@@ -216,7 +216,7 @@ export function Users() {
                                 <th scope="col" className="text-uppercase text-color-1 fw-600 fs-12"> <div className="d-flex align-items-center">Phone number
                                     <div className="dropdown-center">
                                         <div className="" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <img src="/src//assets/icons/filter.svg" alt="" />
+                                            <img src={filter} alt="" />
                                         </div>
                                         <ul className="dropdown-menu options-container pt-0">
                                             <FilterOption resetFilter={resetFilter}  filterData={filterData} organizationList={organizations} />
@@ -225,7 +225,7 @@ export function Users() {
                                 <th scope="col" className="text-uppercase text-color-1 fw-600 fs-12"> <div className="d-flex align-items-center">Date joined
                                     <div className="dropdown-center">
                                         <div className="" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <img src="/src//assets/icons/filter.svg" alt="" />
+                                            <img src={filter} alt="" />
                                         </div>
                                         <ul className="dropdown-menu options-container pt-0">
                                             <FilterOption resetFilter={resetFilter}  filterData={filterData} organizationList={organizations} />
