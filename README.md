@@ -6,7 +6,7 @@ This application demonstrates my ability to develop web applications. (*Note: On
 - Markup: HTML
 - Styling: SCSS
 - Programing Language: Typescript
-- Frontend Framework: React(Vite)
+- Frontend Framework: React v.18(Vite)
 - Mock Data Generator: JSON Generator
 - Mock Api: mockable.io
 
@@ -15,6 +15,7 @@ This application demonstrates my ability to develop web applications. (*Note: On
 - React Router
 - React Paginator 
 - Axios
+- Google Fonts
 
 
 ## How to view
@@ -25,7 +26,7 @@ The application can be view either locally or online
 - navigate to the clone app on your local machine using the command line
 - run `npm i` to install required dependencies
 - run `npm run dev` to serve the applicaton
-- visit [http://localhost:5173/]http://localhost:5173/ on your preferred browser on your local machine
+- visit [http://localhost:5173/](http://localhost:5173/) on your preferred browser on your local machine
 
 ### Online:
-- visit [https://arinze-okorji-lendsqr-fe-test.netlify.app]here
+- visit [https://arinze-okorji-lendsqr-fe-test.netlify.app](here)
