@@ -15,6 +15,7 @@ import blacklistUser from '../../assets/images/blacklist-user.png';
 import activateUser from '../../assets/images/activate-user.png';
 import caretLeft from '../../assets/icons/caret-left.svg';
 import caretRight from '../../assets/icons/caret-right.svg';
+import filter from '../../assets/icons/filter.svg';
 
 export function Users() {
     let itemOffset = 0;
@@ -93,7 +94,7 @@ export function Users() {
 
     async function fetchUsersSummaryData() {
         // setUsersDataSet([])
-        const url = 'http://demo0007135.mockable.io/users-summary';
+        const url = 'https://demo0007135.mockable.io/users-summary';
         try {
             const { data }: { data: IUsersSummary } = await axios.get(url);
 
@@ -233,7 +234,7 @@ export function Users() {
                                 <th scope="col" className="text-uppercase text-color-1 fw-600 fs-12"> <div className="d-flex align-items-center">Status
                                     <div className="dropdown-center">
                                         <div className="" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <img src="/src//assets/icons/filter.svg" alt="" />
+                                            <img src={filter} alt="" />
                                         </div>
                                         <ul className="dropdown-menu options-container pt-0">
                                             <FilterOption resetFilter={resetFilter}  filterData={filterData} organizationList={organizations} />
