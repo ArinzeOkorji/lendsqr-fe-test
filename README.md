@@ -29,4 +29,4 @@ The application can be view either locally or online
 - visit [http://localhost:5173/](http://localhost:5173/) on your preferred browser on your local machine
 
 ### Online:
-- visit [https://arinze-okorji-lendsqr-fe-test.netlify.app](here)
+- visit [here](https://arinze-okorji-lendsqr-fe-test.netlify.app)
