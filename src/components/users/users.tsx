@@ -21,7 +21,7 @@ export function Users() {
 
     function viewDetails(user: IUser) {
         localStorage.setItem('user', JSON.stringify(user));
-        navigator('/users/details')
+        navigator('/app/users/details')
     }
 
     function sortCurrentData(payload: { data?: IUser[], itemsPerPage: number, itemOffset?: number }) {
@@ -247,7 +247,7 @@ export function Users() {
                                         <td><div className='fs-14'>{user.personalInformation.phone}</div></td>
                                         <td><div className='fs-14'>{new Intl.DateTimeFormat('en', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(user.dateJoined.toString().split(' ')[0]))}</div></td>
                                         <td>
-                                            <div className='fs-14 status'><div className={`d-flex align-items-center justify-content-center rounded-pill fs-14 ${user.status === 'blacklisted' ? 'text-red bg-red-2' : ''} ${user.status === 'active' ? 'text-green bg-green-1' : ''} ${user.status === 'pending' ? 'text-yellow bg-yellow-1' : ''} ${user.status === 'inactive' ? 'text-color-2 bg-blue-1' : ''}`}>{user.status}</div></div>
+                                            <div className='fs-14 status'><div className={`d-flex align-items-center justify-content-center rounded-pill fs-14 text-capitalize ${user.status === 'blacklisted' ? 'text-red bg-red-2' : ''} ${user.status === 'active' ? 'text-green bg-green-1' : ''} ${user.status === 'pending' ? 'text-yellow bg-yellow-1' : ''} ${user.status === 'inactive' ? 'text-color-2 bg-blue-1' : ''}`}>{user.status}</div></div>
                                         </td>
                                         <td>
                                             <div className='fs-14'>
@@ -286,6 +286,7 @@ export function Users() {
                     </table>
                 </div>
 
+            </div>
                 <div className="d-flex flex-column flex-xl-row align-items-center justify-content-between paginator-container">
                     <div className='d-flex text-color-2 mb-3 mb-xl-0 align-items-center pageLengthController'>
                         <div>Showing</div>
@@ -308,7 +309,6 @@ export function Users() {
                         renderOnZeroPageCount={null}
                     />
                 </div>
-            </div>
         </div>
     </>
 }

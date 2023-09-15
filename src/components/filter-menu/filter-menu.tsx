@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import './filter-menu.scss';
-import { IUser } from '../../interface/user';
 import { IfilterParams } from '../../interface/filter';
 
 

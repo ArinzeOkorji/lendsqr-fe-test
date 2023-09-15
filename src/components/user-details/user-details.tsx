@@ -52,7 +52,7 @@ export function UserDetails() {
                             <div className='text-color-1 fw-500 fs-14'>User's Tier</div>
                             <div className="d-flex align-items-center tier-container">
                                 {
-                                    Array.from(Array(3).keys()).map((key: number, index: number) => {
+                                    Array.from(Array(3).keys()).map((_key: number, index: number) => {
                                         return <div key={index}>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill='none' className={`${user?.tier && user?.tier >= index + 1 ? 'd-none' : ''}`}>
                                                 <g clipPath="url(#clip0_5530_1562)">
