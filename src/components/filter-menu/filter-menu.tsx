@@ -4,8 +4,8 @@ import { IfilterParams } from '../../interface/filter';
 
 
 export function FilterOption(
-    { organizationList, filterData, resetFilter }:
-    { organizationList: string[], filterData: Function, resetFilter: Function }
+    { organizationList, filterMethodRef, resetFilterMethodRef }:
+    { organizationList: string[], filterMethodRef: Function, resetFilterMethodRef: Function }
     ) {
     const organizationFieldRef = useRef<HTMLSelectElement>(null);
     const usernameFieldRef = useRef<HTMLInputElement>(null);
@@ -45,7 +45,7 @@ export function FilterOption(
             filterParams.status = status
         }
 
-        filterData(filterParams);
+        filterMethodRef(filterParams);
 
 
     }
@@ -58,7 +58,7 @@ export function FilterOption(
         phoneFieldRef.current ? phoneFieldRef.current.value = '' : null;
         statusFieldRef.current ? statusFieldRef.current.value = '' : null;
 
-        resetFilter()
+        resetFilterMethodRef()
     }
 
 
@@ -67,7 +67,7 @@ export function FilterOption(
             <form>
                 <div className="mb-3">
                     <label htmlFor="organization" className="form-label fw-500 text-color-2 fs-14">Organization</label>
-                    <select className="form-select" aria-label="Default select example" ref={organizationFieldRef}>
+                    <select className="form-select" id='organization' aria-label="Default select example" ref={organizationFieldRef}>
                         <option value=''>Select</option>
                         {
                             organizationList.map((organization, index: number) => {
@@ -106,7 +106,7 @@ export function FilterOption(
 
                 <div>
                     <div className="d-flex align-items-center button-container">
-                        <button type='button' className='button-grey-outline flex-grow-1 py-0' onClick={reset}>Reset</button>
+                        <button type='button' className='button-grey-outline flex-grow-1 py-0' data-testid='reset' onClick={reset}>Reset</button>
                         <button type='button' className='button-primary flex-grow-1 py-0' onClick={filter}>Filter</button>
                     </div>
                 </div>

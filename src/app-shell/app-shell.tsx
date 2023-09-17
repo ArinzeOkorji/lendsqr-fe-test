@@ -52,7 +52,7 @@ export function AppShell() {
                                     </div>
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li className='px-2' onClick={logout}>Logout</li>
+                                    <li className='px-2' data-testid='logout' onClick={logout}>Logout</li>
                                 </ul>
                             </li>
                         </ul>

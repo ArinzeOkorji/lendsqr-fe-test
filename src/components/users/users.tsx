@@ -189,7 +189,7 @@ export function Users() {
                                             <img src={filter} alt="" />
                                         </div>
                                         <ul className="dropdown-menu options-container pt-0">
-                                            <FilterOption resetFilter={resetFilter}  filterData={filterData} organizationList={organizations} />
+                                            <FilterOption resetFilterMethodRef={resetFilter}  filterMethodRef={filterData} organizationList={organizations} />
                                         </ul>
                                     </div>
 
@@ -200,7 +200,7 @@ export function Users() {
                                             <img src={filter} alt="" />
                                         </div>
                                         <ul className="dropdown-menu options-container pt-0">
-                                            <FilterOption resetFilter={resetFilter}  filterData={filterData} organizationList={organizations} />
+                                            <FilterOption resetFilterMethodRef={resetFilter}  filterMethodRef={filterData} organizationList={organizations} />
                                         </ul>
                                     </div>
                                 </div></th>
@@ -210,7 +210,7 @@ export function Users() {
                                             <img src={filter} alt="" />
                                         </div>
                                         <ul className="dropdown-menu options-container pt-0">
-                                            <FilterOption resetFilter={resetFilter}  filterData={filterData} organizationList={organizations} />
+                                            <FilterOption resetFilterMethodRef={resetFilter}  filterMethodRef={filterData} organizationList={organizations} />
                                         </ul>
                                     </div></div></th>
                                 <th scope="col" className="text-uppercase text-color-1 fw-600 fs-12"> <div className="d-flex align-items-center">Phone number
@@ -219,7 +219,7 @@ export function Users() {
                                             <img src={filter} alt="" />
                                         </div>
                                         <ul className="dropdown-menu options-container pt-0">
-                                            <FilterOption resetFilter={resetFilter}  filterData={filterData} organizationList={organizations} />
+                                            <FilterOption resetFilterMethodRef={resetFilter}  filterMethodRef={filterData} organizationList={organizations} />
                                         </ul>
                                     </div></div></th>
                                 <th scope="col" className="text-uppercase text-color-1 fw-600 fs-12"> <div className="d-flex align-items-center">Date joined
@@ -228,7 +228,7 @@ export function Users() {
                                             <img src={filter} alt="" />
                                         </div>
                                         <ul className="dropdown-menu options-container pt-0">
-                                            <FilterOption resetFilter={resetFilter}  filterData={filterData} organizationList={organizations} />
+                                            <FilterOption resetFilterMethodRef={resetFilter}  filterMethodRef={filterData} organizationList={organizations} />
                                         </ul>
                                     </div></div></th>
                                 <th scope="col" className="text-uppercase text-color-1 fw-600 fs-12"> <div className="d-flex align-items-center">Status
@@ -237,7 +237,7 @@ export function Users() {
                                             <img src={filter} alt="" />
                                         </div>
                                         <ul className="dropdown-menu options-container pt-0">
-                                            <FilterOption resetFilter={resetFilter}  filterData={filterData} organizationList={organizations} />
+                                            <FilterOption resetFilterMethodRef={resetFilter}  filterMethodRef={filterData} organizationList={organizations} />
                                         </ul>
                                     </div></div></th>
                                 <th scope="col" className="text-uppercase text-color-1 fw-600 fs-12"></th>
